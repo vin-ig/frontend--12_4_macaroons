@@ -1,0 +1,158 @@
+/* HEADER */
+.header {
+    padding-top: 38px;
+    padding-bottom: 29px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 0;
+}
+
+.menu {
+    padding-right: 56px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    padding-right: 40px;
+}
+
+.menu a {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    font-size: 14px;
+    font-family: "Gilroy Medium";
+    color: rgb(119, 11, 29);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    border-color: inherit;
+}
+
+.contacts {
+    font-size: 16px;
+    font-family: "Gilroy Bold";
+    color: rgb(255, 255, 255);
+}
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background: #821328;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: inherit;
+}
+
+.burger::before {
+    top: -10px;
+}
+
+.burger::after {
+    top: 10px;
+}
+
+.burger, .close {
+    display: none;
+}
+
+
+/* 1024 - 1169 */
+@media screen and (max-width: 1169px) {
+    .menu,
+    .menu li:last-child {
+        padding-right: 0;
+    }
+}
+
+/* 769 - 1023 */
+@media screen and (max-width: 1023px) {
+    .header .contacts {
+        display: none;
+    }
+
+    .menu {
+        padding-right: 158px;
+    }
+}
+
+/* 540 - 767 */
+@media screen and (max-width: 767px) {
+    .menu {
+        padding: 0;
+    }
+}
+
+/* 425 - 539 */
+@media screen and (max-width: 539px) {
+    .menu {
+        display: none;
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 10;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+        /* padding: 200px 0 200px; */
+    }
+
+    .menu li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eba8b1;
+    }
+
+    .menu a {
+        color: #eba8b1;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .close svg {
+        width: 24px;
+        height: 24px;
+        fill: #eba8b1;
+    }
+
+    .menu.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu .close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}
