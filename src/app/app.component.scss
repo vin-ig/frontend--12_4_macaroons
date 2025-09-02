@@ -1,0 +1,585 @@
+/* MAIN */
+.main {
+    padding: 143px 0 145px;
+    overflow: hidden;
+}
+
+.main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-info {
+    max-width: 585px;
+}
+
+.main-info h1 {
+    padding-bottom: 60px;
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    line-height: 1.091;
+}
+
+.main-info p {
+    padding-bottom: 80px;
+    max-width: 360px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.389;
+}
+
+.button {
+    background: linear-gradient(90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    border: 0;
+    border-radius: 9999px;
+    color: white;
+    font-family: 'Gilroy Bold', sans-serif;
+    line-height: 1;
+    transition: all 400ms;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+}
+
+.button.button-main {
+    width: 240px;
+    height: 60px;
+    font-size: 18px;
+}
+
+.main-image {
+    position: relative;
+    z-index: 1;
+}
+
+.main-image img {
+    width: 100%;
+}
+
+.main-image::before,
+.main-image::after {
+    content: '';
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    border: 1px solid #821328;
+    animation: pulse 2s infinite backwards;
+    position: absolute;
+    top: -115px;
+    left: -70px;
+    z-index: -1;
+}
+
+.main-image::after {
+    animation-delay: 500ms;
+}
+
+/* ADVANTAGES */
+.advantages {
+    padding: 119px 0 120px;
+}
+
+.advantages-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 88px;
+}
+
+.advantages-description h2 {
+    font-size: 45px;
+    color: rgb(51, 25, 7);
+    line-height: 1.222;
+    max-width: 488px;
+    padding-bottom: 60px;
+}
+
+.advantages-description p {
+    font-size: 18px;
+    font-family: "Gilroy Regular";
+    color: rgb(51, 25, 7);
+    line-height: 1.556;
+    max-width: 400px;
+}
+
+.advantages-image img {
+    max-width: 100%;
+}
+
+.advantages-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-gap: 80px min(30px);
+    justify-content: space-between;
+}
+
+.advantages-item:hover .advantages-item-number {
+    background: #eba8b1;
+    color: #821328;
+}
+
+.advantages-item-number {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+    background-color: rgb(130, 19, 40);
+    width: 70px;
+    height: 70px;
+    font-size: 60px;
+    font-family: "Gilroy ExtraBold";
+    color: rgb(255, 255, 255);
+    line-height: 44px;
+    transition: all 400ms;
+}
+
+.advantages-item-title {
+    padding-top: 13px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: "Gilroy ExtraBold";
+    color: rgb(51, 25, 7);
+
+}
+
+.advantages-item-text {
+    font-size: 15px;
+    font-family: "Gilroy Medium";
+    color: rgb(51, 25, 7);
+    line-height: 1.333;
+}
+
+
+/* PRODUCT */
+.products {
+    padding: 120px 0 100px;
+}
+
+.products .container {
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    padding-bottom: 143px;
+}
+
+.product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 263px);
+    grid-gap: 136px 29px;
+    justify-content: center;
+}
+
+.product {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 0 19px 25px;
+}
+
+.product-image {
+    height: 61px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 47px;
+    transition: all 400ms;
+}
+
+.product h3 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    padding-bottom: 26px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-details span {
+    font-size: 15px;
+    font-family: "Gilroy Regular";
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: left;
+}
+
+.product-details span:first-child {
+    padding-bottom: 16px;
+}
+
+.button.product-button {
+    width: 130px;
+    height: 50px;
+}
+
+.product:hover .product-image {
+    transform: scale(1.1);
+}
+
+
+/* ORDER */
+.order .container {
+    padding-top: 98px;
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+}
+
+.order-image-main {
+    justify-self: center;
+    align-items: center;
+}
+
+.order-image-main img {
+    max-width: 100%;
+}
+
+.order-form {
+    padding-left: 15px;
+}
+
+.order-form h2 {
+    font-size: 45px;
+    color: rgb(51, 25, 7);
+    padding-bottom: 41px;
+}
+
+.order-form p {
+    font-size: 18px;
+    font-family: "Gilroy Regular";
+    color: rgb(51, 25, 7);
+    line-height: 1.556;
+    padding-bottom: 23px;
+    max-width: 405px;
+}
+
+.order-form h3 {
+    font-size: 18px;
+    font-family: "Gilroy Bold";
+    color: rgb(18, 10, 6);
+    padding-top: 25px;
+    padding-bottom: 21px;
+}
+
+.order-form input {
+    display: block;
+    font-size: 15px;
+    font-family: "Gilroy Bold";
+    color: rgb(118, 12, 34);
+    margin-bottom: 15px;
+    border: 1px solid #821328;
+    border-radius: 9999px;
+    width: 294px;
+    height: 60px;
+    padding: 22px 26px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.order-form input::placeholder {
+    color: #c0707c;
+}
+
+.button.button-order {
+    width: 294px;
+    height: 60px;
+}
+
+.order-image-berry {
+    position: absolute;
+    animation: berry-move infinite ease-in-out alternate;
+}
+
+#berry-1 {
+    top: 142px;
+    animation-duration: 2s;
+}
+
+#berry-2 {
+    bottom: 195px;
+    right: 160px;
+    animation-duration: 3s;
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+    from {
+        transform: scale(0.2);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes berry-move {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+
+/* 1024 - 1169 */
+@media screen and (max-width: 1169px) {
+    .product-items {
+        grid-template-columns: repeat(2, 263px);
+    }
+}
+
+
+/* 769 - 1023 */
+@media screen and (max-width: 1023px) {
+    .main {
+        padding: 70px 0 62px;
+    }
+
+    .main .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-info {
+        text-align: left;
+    }
+
+    .main-info h1 {
+        padding-bottom: 74px;
+    }
+
+    .main-info p {
+        padding-bottom: 41px;
+    }
+
+    .main-image {
+        display: flex;
+        align-items: flex-end;
+        align-self: flex-end;
+        height: 358px;
+        padding-right: 35px;
+    }
+
+    .main-image img {
+        width: 530px;
+    }
+
+    .advantages {
+        text-align: center;
+    }
+
+    .advantages-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages-description h2 {
+        display: inline-block;
+    }
+
+    .advantages-description p {
+        padding-bottom: 40px;
+        max-width: 680px;
+    }
+
+    .advantages-image img {
+        width: 300px;
+    }
+
+    .advantages-items {
+        grid-template-columns: repeat(2, 220px);
+        justify-content: center;
+        grid-column-gap: min(54px);
+    }
+
+    .advantages-item-number {
+        justify-self: center;
+    }
+
+    .order .container {
+        align-items: flex-end;
+    }
+
+    .order-image-main {
+        order: 1;
+        position: relative;
+        bottom: -110px;
+        max-width: 352px;
+    }
+
+    .order-form {
+        padding-left: 0;
+    }
+
+    #berry-1 {
+        top: 337px;
+        right: calc(40%);
+    }
+
+    #berry-2 {
+        top: 231px;
+        right: 108px;
+    }
+}
+
+
+/* 540 - 767 */
+@media screen and (max-width: 767px) {
+    .main {
+        padding: 60px 0 43px;
+    }
+
+    .main .container {
+        align-items: center;
+    }
+
+    .main-info {
+        text-align: center;
+        max-width: unset;
+        position: relative;
+        z-index: 2;
+    }
+
+    .main-info h1 {
+        padding-bottom: 40px;
+        font-size: 32px;
+    }
+
+    .main-info p {
+        max-width: unset;
+        padding: 0 40px 37px;
+        font-size: 16px;
+    }
+
+    .button.button-main {
+        margin-bottom: 38px;
+    }
+
+    .main-image {
+        max-width: 250px;
+        height: unset;
+        align-self: unset;
+        padding: 0;
+    }
+
+    .main-image img {
+        width: 100%;
+    }
+
+    .main-image::before,
+    .main-image::after {
+        width: 400px;
+        height: 400px;
+    }
+
+    .advantages {
+        padding: 100px 0 100px;
+    }
+
+    .advantages-title {
+        padding-bottom: 60px;
+    }
+
+    .advantages-description h2 {
+        font-size: 30px;
+        padding-bottom: 40px;
+    }
+
+    .advantages-description p {
+        font-size: 16px;
+        padding-bottom: 59px;
+    }
+
+    .advantages-items {
+        grid-gap: 36px min(15px);
+        grid-template-columns: repeat(2, minmax(165px, 220px));
+    }
+
+    .product-items {
+        grid-template-columns: 263px;
+    }
+
+    .advantages-item-title {
+        font-size: 18px;
+    }
+
+    .advantages-item-text {
+        font-size: 13px;
+    }
+
+    .products {
+        padding-top: 100px;
+    }
+
+    .products h2 {
+        font-size: 30px;
+        padding-bottom: 122px;
+    }
+
+    .product-items {
+        grid-row-gap: 142px;
+    }
+
+    .order .container {
+        grid-template-columns: 1fr;
+    }
+
+    .order-image-main {
+        display: none;
+    }
+
+    .order-form {
+        padding: 0;
+    }
+
+    .order-form h2 {
+        font-size: 30px;
+    }
+
+    .order-form p {
+        font-size: 16px;
+    }
+
+    #berry-1 {
+        right: 15px;
+        top: 215px;
+    }
+
+    #berry-2 {
+        display: none;
+    }
+}
+
+
+/* 375 - 424 */
+@media screen and (max-width: 424px) {
+    .order-form input,
+    .button.button-order {
+        width: 100%;
+    }
+}
+
+
+/* 320 - 374 */
+@media screen and (max-width: 374px) {
+    .advantages-items {
+        grid-template-columns: 1fr;
+    }
+}

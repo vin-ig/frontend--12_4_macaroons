@@ -46,3 +46,18 @@ body {
 .bg-lightpink {
     background: #ffefef;
 }
+
+
+/* 769 - 1023 */
+@media screen and (max-width: 1023px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* 540 - 767 */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 15px;
+    }
+}
