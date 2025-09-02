@@ -9,6 +9,11 @@ import {ProductType} from "./types/product.type";
 })
 
 export class AppComponent {
+    public static contacts = {
+        phone: '+375 (29) 368-98-68',
+        instagramLink: '#',
+    }
+
     public advantages: AdvantageType[] = [
         {
             title: 'Лучшие продукты',

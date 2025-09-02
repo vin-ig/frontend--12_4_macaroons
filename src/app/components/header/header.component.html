@@ -27,7 +27,7 @@
                 <li><a href="#order" (click)="closeMenu(menuElement)">Оформить заказ</a></li>
             </ul>
         </nav>
-        <div class="contacts">+375 (29) 368-98-68</div>
+        <div class="contacts">{{ AppComponent.contacts.phone }}</div>
         <div class="burger" (click)="openMenu(menuElement)"></div>
     </div>
 </header>

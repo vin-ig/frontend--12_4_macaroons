@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AppComponent} from "../../app.component";
 
 @Component({
     selector: 'footer-component',
@@ -13,4 +14,5 @@ export class FooterComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    protected readonly AppComponent = AppComponent;
 }

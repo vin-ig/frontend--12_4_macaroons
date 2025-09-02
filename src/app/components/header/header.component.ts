@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AppComponent} from "../../app.component";
 
 @Component({
     selector: 'header-component',
@@ -21,4 +22,6 @@ export class HeaderComponent implements OnInit {
     public closeMenu(target: HTMLElement): void {
         target.classList.remove('open')
     }
+
+    protected readonly AppComponent = AppComponent;
 }
