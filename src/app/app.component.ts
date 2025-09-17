@@ -1,17 +1,22 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AdvantageType} from "./types/advantage.type";
 import {ProductType} from "./types/product.type";
+import {ProductService} from "./services/product.service";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    providers: [ProductService],
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
     public static contacts = {
         phone: '+375 (29) 368-98-68',
         instagramLink: '#',
+    }
+
+    constructor(private productService: ProductService) {
     }
 
     public advantages: AdvantageType[] = [
@@ -33,41 +38,16 @@ export class AppComponent {
         },
     ]
 
-    public products: ProductType[] = [
-        {
-            image: 'product-1.png',
-            name: 'Макарун с малиной',
-            amount: 1,
-            price: 110,
-            currency: 'руб.',
-        },
-        {
-            image: 'product-2.png',
-            name: 'Макарун с манго',
-            amount: 1,
-            price: 125,
-            currency: 'руб.',
-        },
-        {
-            image: 'product-3.png',
-            name: 'Макарун с ванилью',
-            amount: 1,
-            price: 100,
-            currency: 'руб.',
-        },
-        {
-            image: 'product-4.png',
-            name: 'Макарун с фисташками',
-            amount: 1,
-            price: 130,
-            currency: 'руб.',
-        },
-    ]
+    public products: ProductType[] = []
 
     public formValues = {
         productTitle: '',
         name: '',
         phone: '',
+    }
+
+    ngOnInit() {
+        this.products = this.productService.getProducts()
     }
 
     public scrollTo(target: HTMLElement): void {
