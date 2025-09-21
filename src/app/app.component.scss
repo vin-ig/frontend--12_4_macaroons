@@ -77,81 +77,6 @@
     animation-delay: 500ms;
 }
 
-/* ADVANTAGES */
-.advantages {
-    padding: 119px 0 120px;
-}
-
-.advantages-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 88px;
-}
-
-.advantages-description h2 {
-    font-size: 45px;
-    color: rgb(51, 25, 7);
-    line-height: 1.222;
-    max-width: 488px;
-    padding-bottom: 60px;
-}
-
-.advantages-description p {
-    font-size: 18px;
-    font-family: "Gilroy Regular";
-    color: rgb(51, 25, 7);
-    line-height: 1.556;
-    max-width: 400px;
-}
-
-.advantages-image img {
-    max-width: 100%;
-}
-
-.advantages-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 220px);
-    grid-gap: 80px min(30px);
-    justify-content: space-between;
-}
-
-.advantages-item:hover .advantages-item-number {
-    background: #eba8b1;
-    color: #821328;
-}
-
-.advantages-item-number {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 50%;
-    background-color: rgb(130, 19, 40);
-    width: 70px;
-    height: 70px;
-    font-size: 60px;
-    font-family: "Gilroy ExtraBold";
-    color: rgb(255, 255, 255);
-    line-height: 44px;
-    transition: all 400ms;
-}
-
-.advantages-item-title {
-    padding-top: 13px;
-    padding-bottom: 20px;
-    font-size: 20px;
-    font-family: "Gilroy ExtraBold";
-    color: rgb(51, 25, 7);
-
-}
-
-.advantages-item-text {
-    font-size: 15px;
-    font-family: "Gilroy Medium";
-    color: rgb(51, 25, 7);
-    line-height: 1.333;
-}
-
 
 /* PRODUCT */
 .products {
@@ -381,38 +306,6 @@
         width: 530px;
     }
 
-    .advantages {
-        text-align: center;
-    }
-
-    .advantages-title {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .advantages-description h2 {
-        display: inline-block;
-    }
-
-    .advantages-description p {
-        padding-bottom: 40px;
-        max-width: 680px;
-    }
-
-    .advantages-image img {
-        width: 300px;
-    }
-
-    .advantages-items {
-        grid-template-columns: repeat(2, 220px);
-        justify-content: center;
-        grid-column-gap: min(54px);
-    }
-
-    .advantages-item-number {
-        justify-self: center;
-    }
-
     .order .container {
         align-items: flex-end;
     }
@@ -489,29 +382,6 @@
         height: 400px;
     }
 
-    .advantages {
-        padding: 100px 0 100px;
-    }
-
-    .advantages-title {
-        padding-bottom: 60px;
-    }
-
-    .advantages-description h2 {
-        font-size: 30px;
-        padding-bottom: 40px;
-    }
-
-    .advantages-description p {
-        font-size: 16px;
-        padding-bottom: 59px;
-    }
-
-    .advantages-items {
-        grid-gap: 36px min(15px);
-        grid-template-columns: repeat(2, minmax(165px, 220px));
-    }
-
     .product-items {
         grid-template-columns: 263px;
     }
@@ -573,13 +443,5 @@
     .order-form input,
     .button.button-order {
         width: 100%;
-    }
-}
-
-
-/* 320 - 374 */
-@media screen and (max-width: 374px) {
-    .advantages-items {
-        grid-template-columns: 1fr;
     }
 }
