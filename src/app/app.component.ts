@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AdvantageType} from "./types/advantage.type";
 import {ProductType} from "./types/product.type";
 import {ProductService} from "./services/product.service";
+import {CartService} from "./services/cart.service";
 
 @Component({
     selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit{
         instagramLink: '#',
     }
 
-    constructor(private productService: ProductService) {
+    constructor(private productService: ProductService,
+                private cartService: CartService) {
     }
 
     public advantages: AdvantageType[] = [
@@ -57,6 +59,10 @@ export class AppComponent implements OnInit{
     public addToCart(product: ProductType, target: HTMLElement): void {
         this.scrollTo(target)
         this.formValues.productTitle = product.name.toUpperCase()
+
+        this.cartService.count++
+        this.cartService.price += product.price
+        this.cartService.currency = product.currency  // Для простоты не учитываем случай, если будут разные валюты
     }
 
     public createOrder(): void {

@@ -1,8 +1,7 @@
 <section class="present" *ngIf="showPresent">
     <div class="present-circle">
-        <img src="assets/images/present.png" alt="Present">
+        <img src="assets/images/cart.png" alt="Present">
+        <div class="present-badge">{{cartInfo.count}}</div>
     </div>
-    <div class="present-label">
-        Оформите заказ <br> и получите подарок!
-    </div>
+    <div class="present-label">{{cartInfo.count ? (cartInfo.price + ' ' + cartInfo.currency) : 'Корзина пока пуста'}}</div>
 </section>
