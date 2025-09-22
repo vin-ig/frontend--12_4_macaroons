@@ -44,6 +44,8 @@ export class AppComponent implements OnInit{
         this.cartService.count++
         this.cartService.price += product.price
         this.cartService.currency = product.currency  // Для простоты не учитываем случай, если будут разные валюты
+
+        alert(`"${product.name}" добавлен в корзину!`)
     }
 
     public createOrder(): void {

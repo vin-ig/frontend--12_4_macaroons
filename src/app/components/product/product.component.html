@@ -1,0 +1,13 @@
+<figure class="product">
+    <div class="product-image">
+        <img [src]="'assets/images/' + product.image" alt="Product">
+    </div>
+    <h3>{{ product.name }}</h3>
+    <div class="product-details">
+        <div class="product-info">
+            <span>{{ product.amount }} шт.</span>
+            <span>{{ product.price }} {{ product.currency }}</span>
+        </div>
+        <button class="button product-button" (click)="addProductToCart()">Заказать</button>
+    </div>
+</figure>
