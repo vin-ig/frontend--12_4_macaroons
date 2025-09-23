@@ -6,7 +6,7 @@
     <div class="product-details">
         <div class="product-info">
             <span>{{ product.amount }} шт.</span>
-            <span>{{ product.price }} {{ product.currency }}</span>
+            <span>{{ product.price | currency: 'руб.' }}</span>
         </div>
         <button class="button product-button" (click)="addProductToCart()"
                 buttonEffects [buttonDefaultBgColor]="'gray'" [buttonHoverBgColor]="'lightblue'">Заказать</button>
