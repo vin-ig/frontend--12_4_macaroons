@@ -13,7 +13,7 @@ import {CartService} from "./services/cart.service";
 
 export class AppComponent implements OnInit{
     public static contacts = {
-        phone: '+375 (29) 368-98-68',
+        phone: '375293689868',
         instagramLink: '#',
     }
 

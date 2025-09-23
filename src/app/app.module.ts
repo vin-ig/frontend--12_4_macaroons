@@ -11,6 +11,7 @@ import { AdvantageComponent } from './components/advantage/advantage.component';
 import { ProductComponent } from './components/product/product.component';
 import { ButtonEffectsDirective } from './directives/button-effects.directive';
 import { ShortDescriptionPipe } from './pipes/short-description.pipe';
+import { PhoneFormatterPipe } from './pipes/phone-formatter.pipe';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { ShortDescriptionPipe } from './pipes/short-description.pipe';
         AdvantageComponent,
         ProductComponent,
         ButtonEffectsDirective,
-        ShortDescriptionPipe
+        ShortDescriptionPipe,
+        PhoneFormatterPipe
     ],
     imports: [
         BrowserModule,
