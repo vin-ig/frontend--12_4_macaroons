@@ -9,6 +9,7 @@ import {PresentComponent} from './components/present/present.component';
 import {FormsModule} from "@angular/forms";
 import { AdvantageComponent } from './components/advantage/advantage.component';
 import { ProductComponent } from './components/product/product.component';
+import { ButtonEffectsDirective } from './directives/button-effects.directive';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ProductComponent } from './components/product/product.component';
         FooterComponent,
         PresentComponent,
         AdvantageComponent,
-        ProductComponent
+        ProductComponent,
+        ButtonEffectsDirective
     ],
     imports: [
         BrowserModule,

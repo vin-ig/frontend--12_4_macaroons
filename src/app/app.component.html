@@ -3,7 +3,10 @@
         <div class="main-info">
             <h1>Мягкие французские пироженки Macaroons</h1>
             <p>Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!</p>
-            <button class="button button-main" (click)="scrollTo(productsElement)">Выбрать макарун</button>
+            <button class="button button-main" (click)="scrollTo(productsElement)"
+                    buttonEffects [buttonDefaultBgColor]="'green'" [buttonHoverBgColor]="'fuchsia'">
+                Выбрать макарун
+            </button>
         </div>
         <div class="main-image">
             <img src="assets/images/macaroons-main.png" alt="Macaroons">
@@ -42,7 +45,7 @@
             <h3>Заполните данные для заказа</h3>
             <input type="text" placeholder="Ваше имя" [(ngModel)]="formValues.name">
             <input type="text" placeholder="+375 (__) ___-__-__" [(ngModel)]="formValues.phone">
-            <button class="button button-order" (click)="createOrder()">Оформить заказ</button>
+            <button class="button button-order" (click)="createOrder()" buttonEffects>Оформить заказ</button>
         </div>
     </div>
 </section>

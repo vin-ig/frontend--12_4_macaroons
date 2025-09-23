@@ -8,6 +8,7 @@
             <span>{{ product.amount }} шт.</span>
             <span>{{ product.price }} {{ product.currency }}</span>
         </div>
-        <button class="button product-button" (click)="addProductToCart()">Заказать</button>
+        <button class="button product-button" (click)="addProductToCart()"
+                buttonEffects [buttonDefaultBgColor]="'gray'" [buttonHoverBgColor]="'lightblue'">Заказать</button>
     </div>
 </figure>
