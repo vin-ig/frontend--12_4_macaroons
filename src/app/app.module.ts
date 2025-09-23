@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { AdvantageComponent } from './components/advantage/advantage.component';
 import { ProductComponent } from './components/product/product.component';
 import { ButtonEffectsDirective } from './directives/button-effects.directive';
+import { ShortDescriptionPipe } from './pipes/short-description.pipe';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { ButtonEffectsDirective } from './directives/button-effects.directive';
         PresentComponent,
         AdvantageComponent,
         ProductComponent,
-        ButtonEffectsDirective
+        ButtonEffectsDirective,
+        ShortDescriptionPipe
     ],
     imports: [
         BrowserModule,
