@@ -27,7 +27,7 @@
                 <li><a href="#order" (click)="closeMenu(menuElement)">Оформить заказ</a></li>
             </ul>
         </nav>
-        <div class="contacts">{{ AppComponent.contacts.phone }}</div>
+        <div class="contacts">{{ AppComponent.contacts.phone | phoneFormatter }}</div>
         <div class="burger" (click)="openMenu(menuElement)"></div>
     </div>
 </header>

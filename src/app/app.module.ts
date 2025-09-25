@@ -7,13 +7,23 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {PresentComponent} from './components/present/present.component';
 import {FormsModule} from "@angular/forms";
+import { AdvantageComponent } from './components/advantage/advantage.component';
+import { ProductComponent } from './components/product/product.component';
+import { ButtonEffectsDirective } from './directives/button-effects.directive';
+import { ShortDescriptionPipe } from './pipes/short-description.pipe';
+import { PhoneFormatterPipe } from './pipes/phone-formatter.pipe';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        PresentComponent
+        PresentComponent,
+        AdvantageComponent,
+        ProductComponent,
+        ButtonEffectsDirective,
+        ShortDescriptionPipe,
+        PhoneFormatterPipe
     ],
     imports: [
         BrowserModule,

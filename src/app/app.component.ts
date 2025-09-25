@@ -1,73 +1,36 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AdvantageType} from "./types/advantage.type";
 import {ProductType} from "./types/product.type";
+import {ProductService} from "./services/product.service";
+import {CartService} from "./services/cart.service";
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    providers: [ProductService],
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
     public static contacts = {
-        phone: '+375 (29) 368-98-68',
+        phone: '375293689868',
         instagramLink: '#',
     }
 
-    public advantages: AdvantageType[] = [
-        {
-            title: 'Лучшие продукты',
-            text: 'Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем консерванты, ароматизаторы и красители.',
-        },
-        {
-            title: 'Много вкусов',
-            text: 'Наша задача – предоставить вам широкое разнобразие вкусов. Вы удивитесь, но у нас более 70 вкусов пироженок.',
-        },
-        {
-            title: 'Бисквитное тесто',
-            text: 'Все пирожные готовятся на бисквитном тесте с качественным сливочным маслом 82,5%. В составе нет маргарина и дрожжей!',
-        },
-        {
-            title: 'Честный продукт',
-            text: 'Вкус, качество и безопасность наших пирогов подтверждена декларацией о соответствии, которую мы получили 22.06.2016 г.',
-        },
-    ]
+    constructor(private productService: ProductService,
+                private cartService: CartService) {
+    }
 
-    public products: ProductType[] = [
-        {
-            image: 'product-1.png',
-            name: 'Макарун с малиной',
-            amount: 1,
-            price: 110,
-            currency: 'руб.',
-        },
-        {
-            image: 'product-2.png',
-            name: 'Макарун с манго',
-            amount: 1,
-            price: 125,
-            currency: 'руб.',
-        },
-        {
-            image: 'product-3.png',
-            name: 'Макарун с ванилью',
-            amount: 1,
-            price: 100,
-            currency: 'руб.',
-        },
-        {
-            image: 'product-4.png',
-            name: 'Макарун с фисташками',
-            amount: 1,
-            price: 130,
-            currency: 'руб.',
-        },
-    ]
+    public products: ProductType[] = []
 
     public formValues = {
         productTitle: '',
         name: '',
         phone: '',
+    }
+
+    ngOnInit() {
+        this.products = this.productService.getProducts()
     }
 
     public scrollTo(target: HTMLElement): void {
@@ -77,6 +40,12 @@ export class AppComponent {
     public addToCart(product: ProductType, target: HTMLElement): void {
         this.scrollTo(target)
         this.formValues.productTitle = product.name.toUpperCase()
+
+        this.cartService.count++
+        this.cartService.price += product.price
+        this.cartService.currency = product.currency  // Для простоты не учитываем случай, если будут разные валюты
+
+        alert(`"${product.name}" добавлен в корзину!`)
     }
 
     public createOrder(): void {

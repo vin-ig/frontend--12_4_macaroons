@@ -11,6 +11,7 @@
 }
 
 .present-circle {
+    position: relative;
     border-radius: 50%;
     background: radial-gradient(#71081e, #d7485c);
     width: 90px;
@@ -19,14 +20,19 @@
     justify-content: center;
     align-items: center;
     margin-left: 9px;
+    img {
+        max-width: 50%;
+        transform: translateX(-5px);
+    }
 }
 
 .present-label {
-    width: 172px;
+    display: flex;
+    align-items: center;
     height: 64px;
     border-radius: 10px;
     position: relative;
-    padding: 15px 0 14px 11px;
+    padding: 15px;
     box-sizing: border-box;
     background: #feefee;
     border: 2px solid #770a1d;
@@ -74,4 +80,26 @@
 .present-circle:hover + .present-label {
     transform: unset;
     opacity: 1;
+}
+
+.present-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #770a1d;
+    box-sizing: border-box;
+    background: #feefee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 15px;
+    font-family: "Gilroy Medium";
+    color: rgb(119, 10, 29);
+    line-height: 1;
 }

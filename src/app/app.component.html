@@ -3,7 +3,10 @@
         <div class="main-info">
             <h1>Мягкие французские пироженки Macaroons</h1>
             <p>Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!</p>
-            <button class="button button-main" (click)="scrollTo(productsElement)">Выбрать макарун</button>
+            <button class="button button-main" (click)="scrollTo(productsElement)"
+                    buttonEffects [buttonDefaultBgColor]="'green'" [buttonHoverBgColor]="'fuchsia'">
+                Выбрать макарун
+            </button>
         </div>
         <div class="main-image">
             <img src="assets/images/macaroons-main.png" alt="Macaroons">
@@ -11,48 +14,13 @@
     </div>
 </section>
 
-<section class="advantages bg-lightpink" id="advantages" #advantagesElement>
-    <div class="container">
-        <article class="advantages-title">
-            <div class="advantages-description">
-                <h2>Мы печём для вас вкуснейшие макаруны уже более 10 лет</h2>
-                <p>
-                    Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
-                    ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина,
-                    разрыхлителей и улучшителей муки.
-                </p>
-            </div>
-            <div class="advantages-image">
-                <img src="assets/images/big-macaroon.png" alt="Macaroon">
-            </div>
-        </article>
-        <article class="advantages-items">
-            <div class="advantages-item" *ngFor="let advantage of advantages; let i = index;">
-                <div class="advantages-item-number">{{ i + 1 }}</div>
-                <div class="advantages-item-title">{{ advantage.title }}</div>
-                <div class="advantages-item-text">{{ advantage.text }}</div>
-            </div>
-        </article>
-    </div>
-</section>
+<advantage-component></advantage-component>
 
 <section class="products bg-pink" id="products" #productsElement>
     <div class="container">
         <h2>Выберите свой макарун</h2>
         <article class="product-items">
-            <figure class="product" *ngFor="let product of products">
-                <div class="product-image">
-                    <img [src]="'assets/images/' + product.image" alt="Product">
-                </div>
-                <h3>{{ product.name }}</h3>
-                <div class="product-details">
-                    <div class="product-info">
-                        <span>{{ product.amount }} шт.</span>
-                        <span>{{ product.price }} {{ product.currency }}</span>
-                    </div>
-                    <button class="button product-button" (click)="addToCart(product, orderElement)">Заказать</button>
-                </div>
-            </figure>
+            <product-components *ngFor="let product of products" [product]="product" (addToCartEvent)="addToCart($event, orderElement)"></product-components>
         </article>
     </div>
 </section>
@@ -77,7 +45,7 @@
             <h3>Заполните данные для заказа</h3>
             <input type="text" placeholder="Ваше имя" [(ngModel)]="formValues.name">
             <input type="text" placeholder="+375 (__) ___-__-__" [(ngModel)]="formValues.phone">
-            <button class="button button-order" (click)="createOrder()">Оформить заказ</button>
+            <button class="button button-order" (click)="createOrder()" buttonEffects>Оформить заказ</button>
         </div>
     </div>
 </section>
